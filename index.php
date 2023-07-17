@@ -24,12 +24,11 @@
                     data: {
 
                         keyword: v,
-                        lastname: 'test'
                     },
                     success: function(data) {
                         // console.log(data);
                         // var jdecoded = JSON.parse(data);
-                        $('.box').text(data.html);
+                        $('.box').html(data.html);
                     }
                 })
             });
