@@ -25,9 +25,10 @@
                         keyword: v,
                         lastname: 'test'
                     },
-                    success: function(d) {
+                    success: function(data) {
                         // console.log(data);
-                        $('.box').text(d);
+                        var jdecoded = JSON.parse(data);
+                        $('.box').text(jdecoded.html);
                     }
                 })
             });
