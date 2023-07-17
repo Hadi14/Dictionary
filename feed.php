@@ -13,6 +13,6 @@ $records = $db->doquery("select * from dic_word where word like '%$w%'");
 $out['html'] = "";
 
 foreach ($records as $record) {
-    $out['html'] .= $record['word'] . "<br>";
+    $out['html'] .= "<strong>" . $record['word'] . "</strong>" . "<br>" . $record['meaning'] . "<hr>";
 }
 echo json_encode($out);

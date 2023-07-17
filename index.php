@@ -22,8 +22,7 @@
                     dataType: 'json',
                     type: 'post',
                     data: {
-
-                        keyword: v,
+                        keyword: v
                     },
                     success: function(data) {
                         // console.log(data);
