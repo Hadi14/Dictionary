@@ -19,6 +19,7 @@
             $('#search').on('keyup', function() {
                 var v = $(this).val();
                 $.ajax('feed.php', {
+                    dataType: 'json',
                     type: 'post',
                     data: {
 
@@ -27,8 +28,8 @@
                     },
                     success: function(data) {
                         // console.log(data);
-                        var jdecoded = JSON.parse(data);
-                        $('.box').text(jdecoded.html);
+                        // var jdecoded = JSON.parse(data);
+                        $('.box').text(data.html);
                     }
                 })
             });
